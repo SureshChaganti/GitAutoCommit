@@ -1,0 +1,1 @@
+hi there Git new file creater and check in that file automatically by calling java program.
