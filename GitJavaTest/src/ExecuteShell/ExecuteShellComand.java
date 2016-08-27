@@ -11,27 +11,27 @@ public class ExecuteShellComand {
 
 		// in mac oxs
 
-		String git_dir = "cd /Users/schaganti1/Desktop/GitAutoCommit";
 		String pwd="pwd";
-//		String add_command = "git add py.png";
-//		String commit_command = "git commit -m py.png";
-//		String push_command = "git push";
+		String add_command = "git add .";
+		String commit_command = "git commit -m py.png";
+		String push_command = "git push";
 
 		// in windows
 		// String command = "ping -n 3 " + domainName;
 
-		obj.executeCommand(git_dir);
+	//	obj.executeCommand(git_dir);
 		obj.executeCommand(pwd);
-		// String add_output =
-//		obj.executeCommand(add_command);
-//		// String commit_output =
-//		obj.executeCommand(commit_command);
-//		// String push_output =
-//		obj.executeCommand(push_command);
+		 String add_output =
+		obj.executeCommand(add_command);
+		 String commit_output =
+		obj.executeCommand(commit_command);
+		 String push_output =
+		obj.executeCommand(push_command);
 
-		// System.out.println(commit_output);
-	//	System.out.println("Commit Completed");
-		// System.out.println(push_output);
+		 System.out.println(add_output);
+		 System.out.println(commit_output);
+		System.out.println("Commit Completed");
+		 System.out.println(push_output);
 
 	}
 
@@ -45,6 +45,7 @@ public class ExecuteShellComand {
 		try {
 			p = Runtime.getRuntime().exec(command);
 			p.waitFor();
+			Thread.sleep(1000);
 			 BufferedReader reader =
 			 new BufferedReader(new InputStreamReader(p.getInputStream()));
 			
